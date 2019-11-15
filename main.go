@@ -24,7 +24,7 @@ func main() {
 
 // Вспомогательные функции =========================================
 
-// readCommandLineParams читает параметры командной строки
+// readCommandLineParams возвращает параметры командной строки приложения
 func readCommandLineParams() (serverPort int, env string) {
 	flag.IntVar(&serverPort, "serve", 0, "Запустить приложение на порту с номером > 0 ")
 	flag.StringVar(&env, "env", "prod", "Окружение. Возможные значения: dev - разработка, docker - в докере для фронтэнд разработчиков. prod - по умолчанию для продакшн.")

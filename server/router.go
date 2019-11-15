@@ -1,7 +1,6 @@
 package server
 
 import (
-	"net/http"
 	"image-resizer/pkg/img"
 
 	"github.com/gin-gonic/gin"
@@ -9,16 +8,16 @@ import (
 
 // defineRoutes -  Сопоставляет маршруты функциям контроллера
 func defineRoutes(r *gin.Engine) {
-	r.Handle("OPTIONS", "/graphql", PingHandler)
+	// r.Handle("OPTIONS", "/graphql", PingHandler)
 	r.Handle("POST", "/graphql", GraphQL)
 	r.Handle("POST", "/schema", GraphQL)
 	r.Static("/uploads", "./"+img.Params.Localdir)
 }
 
-// PingHandler нужен для фронта, так как сначала отправляется метод с OPTIONS
-func PingHandler(c *gin.Context) {
-	c.JSON(http.StatusOK, "pong")
-}
+// // PingHandler нужен для фронта, так как сначала отправляется метод с OPTIONS
+// func PingHandler(c *gin.Context) {
+// 	c.JSON(http.StatusOK, "pong")
+// }
 
 // Setup определяет пути и присоединяет функции middleware.
 func Setup() *gin.Engine {
