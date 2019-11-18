@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# поднимаем бд
+# поднимаем 
 docker-compose up -d
-sleep 1
 
-# запускаем приложение
-go run main.go -serve 7777
-
+# поясняем
+sh/greetings.sh

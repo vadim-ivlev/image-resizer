@@ -1,16 +1,13 @@
 #!/bin/bash
 
-# гасим бд
+# гасим 
 docker-compose down
 
-# удаляем файлы бд, и чистим загрузки
-sudo rm -rf pgdata uploads/* uploads_temp/*
+# удаляем кэш
+sudo rm -rf cache
 
-# поднимаем бд
+# поднимаем 
 docker-compose up -d
-sleep 1
 
-# запускаем приложение
-go run main.go -serve 7777
-
-
+# поясняем
+sh/greetings.sh

@@ -1,10 +1,7 @@
 .idea
 .vscode/settings.json
 push.sh
-image-resizer*
 cache
-moon.py
-node_modules
 
 
 
