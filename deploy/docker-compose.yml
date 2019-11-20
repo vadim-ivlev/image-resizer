@@ -6,7 +6,7 @@ services:
     image: image-resizer-prod
     container_name: image-resizer-prod
     ports:
-      - "80:80"
+      - "5080:80"
     volumes:
       #  Место для хранения изображений
       - ./../uploaded-files:/uploads

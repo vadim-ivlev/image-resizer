@@ -7,7 +7,7 @@ services:
     build: .
     container_name: resizer
     ports:
-      - "80:80"
+      - "5080:80"
     volumes:
       #  Место для хранения изображений
       - ./uploads:/uploads
@@ -19,6 +19,6 @@ services:
       - ./configs/image-resizer-default.conf:/etc/nginx/conf.d/default.conf
       
       # Кэш. Можно закомментировать
-      - ./cache/:/cache/
+      # - ./cache/:/cache/
     
     
