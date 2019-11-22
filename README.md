@@ -1,7 +1,6 @@
 # image-resizer
 
 **Сервис масштабирования изображений.**
-Масштабирует и обрезает изображения по требованию клиентского приложения.
 
 
 **Мотивация**
@@ -10,7 +9,7 @@
 
 ##  image-resizer
 
-image-resizer решает проблему, изменяя изображение на сервере. Пусть исходное изображение хранится по адресу
+решает проблему, изменяя изображение на сервере. Пусть исходное изображение хранится по адресу
 
     http://image-resizer.rg.ru/some/path/image.jpg
 
@@ -19,7 +18,7 @@ image-resizer решает проблему, изменяя изображени
 
     http://image-resizer.rg.ru/resize320x240/some/path/image.jpg
 
-Для получения **обрезанного** изображения с размерами 320 на 150 пикселей, нужно выполнить запрос    
+Для получения **обрезанного** изображения с размерами 320 на 150 пикселей
 
     http://image-resizer.rg.ru/crop320x240/some/path/image.jpg
 
@@ -34,7 +33,7 @@ image-resizer решает проблему, изменяя изображени
 
 ## Использование с file-uploader
 
-image-resizer удобно использовать совместно с сервисом загрузки файлов file-uploader. В таком случае папка, куда file-uploader загружает файлы и папка, откуда image-resizer берет изображения, могут совпадать.
+`image-resizer` можно использовать с сервисом загрузки файлов `file-uploader`. В таком случае папка, куда `file-uploader` загружает файлы и папка, откуда `image-resizer` берет изображения, могут совпадать.
 
 
 Р И С У Н О К
@@ -42,11 +41,11 @@ image-resizer удобно использовать совместно с сер
 
 ## Изменения размеров
 
-Масштабирование  resize320x150
+Масштабирование  `resize320x150`
 
 Р И С У Н О К
 
-Обрезка crop320x150
+Обрезка `crop320x150`
 
 Р И С У Н О К
 
@@ -72,11 +71,11 @@ image-resizer удобно использовать совместно с сер
 
 - Масштабированное 320x200  <http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg>
 
-<img src="http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg">
+<img src="http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg" style="border: 1px solid silver; width:320px; height:150px;">
 
 - Обрезанное 320x200 <http://image-resizer.rg.ru/crop320x200/2019/10/03/30830/dont.jpg>
 
-<img src="http://image-resizer.rg.ru/crop320x200/2019/10/03/30830/dont.jpg">
+<img src="http://image-resizer.rg.ru/crop320x200/2019/10/03/30830/dont.jpg" style="border: 1px solid silver; width:320px; height:150px;">
 
 <!-- ## Нагрузочное тестирование -->
 
