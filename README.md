@@ -69,7 +69,7 @@
 
 <img src="http://image-resizer.rg.ru/2019/10/03/30830/dont.jpg">
 
-- Масштабированное 320x200  <http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg>
+- Масштабированное 320x2001  <http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg>
 
 <img src="http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg" style="border: 1px solid silver; width:320px; height:150px;">
 
