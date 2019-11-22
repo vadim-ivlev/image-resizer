@@ -16,11 +16,11 @@
     
 Для получения **масштабированного** изображения с шириной 320 и высотой 150 пикселей, нужно выполнить запрос
 
-- `http://image-resizer.rg.ru/resize320x240/some/path/image.jpg`
+- `http://image-resizer.rg.ru/`**resize320x240**`/some/path/image.jpg`
 
 Для получения **обрезанного** изображения с размерами 320 на 150 пикселей
 
-- `http://image-resizer.rg.ru/crop320x240/some/path/image.jpg`
+- `http://image-resizer.rg.ru/`**crop320x240**`/some/path/image.jpg`
 
 
 Сервер изменяет изображение и возвращает уменьшенную копию клиенту.
