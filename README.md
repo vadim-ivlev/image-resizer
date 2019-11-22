@@ -54,11 +54,33 @@
 
 ## Настройки
 
-- Папка с исходными изображениями (или url)
+- Папка с исходными изображениями (или url).  Файл `docker-compose.yml` строки: 
 
-- Время жизни уменьшенных изображений в кэше
+        volumes:
+        #  Место для хранения изображений
+        - ./directory_for_images:/images
 
-- Размер кэша. Если место для хранения уменьшенных изображений заканчивается, приложение удаляет самые старые файлы освобождая место для новых.
+- Папка кэша.  Файл `docker-compose.yml` строки: 
+
+        volumes:
+            ...
+            - ./cache_directory/:/cache/
+            ...
+
+    Папку кэша можно закомментировать в `docker-compose.yml`. В этом случае кэш будет исчезать при перезапуске контейнеров.
+
+- Время жизни уменьшенных изображений в кэше. Файл `configs/image-resizer-default.conf` строки: 
+
+        proxy_cache_valid  200      24h;
+
+
+- Размер кэша. Если место для хранения уменьшенных изображений заканчивается, приложение удаляет самые старые файлы освобождая место для новых. Файл `configs/image-resizer-default.conf` строки: 
+
+        proxy_cache_path /cache 
+                ...
+                max_size=5G 
+                ...
+
 
 
 ## Проверки
@@ -69,13 +91,13 @@
 
 <img src="http://image-resizer.rg.ru/2019/10/03/30830/dont.jpg">
 
-- Масштабированное 320x2001  <http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg>
+- Масштабированное 320x200  <http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg>
 
-<img src="http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg" style="border: 1px solid silver; width:320px; height:150px;">
+<img src="http://image-resizer.rg.ru/resize320x200/2019/10/03/30830/dont.jpg" >
 
 - Обрезанное 320x200 <http://image-resizer.rg.ru/crop320x200/2019/10/03/30830/dont.jpg>
 
-<img src="http://image-resizer.rg.ru/crop320x200/2019/10/03/30830/dont.jpg" style="border: 1px solid silver; width:320px; height:150px;">
+<img src="http://image-resizer.rg.ru/crop320x200/2019/10/03/30830/dont.jpg" >
 
 <!-- ## Нагрузочное тестирование -->
 
