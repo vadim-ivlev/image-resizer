@@ -1,6 +1,5 @@
-<!-- # image-resizer -->
+# image-resizer
 
-<div style="font-size: 60px;">image-resizer</div>
 
 **Сервис масштабирования изображений.**
 
