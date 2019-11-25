@@ -1,4 +1,4 @@
-<img src="doc/title.png" >
+<img src="doc/title.png" width="80%" >
 
 # image-resizer
 
