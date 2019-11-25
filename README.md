@@ -57,11 +57,16 @@
 
 ## Настройки
 
-- Папка (или url) с исходными изображениями.  Файл `docker-compose.yml`: 
+- Папка с исходными изображениями.  Файл `docker-compose.yml`: 
 
         volumes:
         #  Место для хранения изображений
         - ./directory_for_images:/images
+
+    Если нужно брать изображения не из директории, а по URL, 
+    измените файл `configs/image-resizer-default.conf`. В `location` Нужно добавить директиву `proxy-path`. 
+    Строку `- ./directory_for_images:/images` в  `docker-compose.yml` 
+    в этом случае нужно закомментировать.
 
 - Папка кэша.  Файл `docker-compose.yml`: 
 
