@@ -3,8 +3,8 @@ services:
 
 
   image-resizer:
-    image: image-resizer
-    build: .
+    image: rgru/image-resizer:latest
+    # build: .
     container_name: image-resizer
     ports:
       - "5080:80"
