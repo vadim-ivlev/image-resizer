@@ -12,10 +12,10 @@ services:
       - ./../uploaded-files:/images
 
       # Модуль обработки изображений не загружен по умолчанию. Делаем это вручную. 
-      - ./configs/image-resizer-nginx.conf:/etc/nginx/nginx.conf
+      # - ./configs/image-resizer-nginx.conf:/etc/nginx/nginx.conf
       
       # Файл конфигурации nginx, для ресайза и кэширования
-      - ./configs/image-resizer-default.conf:/etc/nginx/conf.d/default.conf
+      # - ./configs/image-resizer-default.conf:/etc/nginx/conf.d/default.conf
       
       # Кэш. Можно закомментировать. но тогда кэш будет исчезать при перезапуске контейнеров
       - ./../resized-images-cache/:/cache/
